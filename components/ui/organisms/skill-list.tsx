@@ -4,6 +4,7 @@ import { useState } from "react";
 
 import { ExternalLink } from "../atoms/external-link";
 import { skills } from "@/data/skills";
+import { Tooltip } from "../molecules/tooltip";
 
 export const SkillList = () => {
   const [percentage, setPercentage] = useState(skills[0].percentage);
@@ -32,26 +33,27 @@ export const SkillList = () => {
         className="flex flex-wrap justify-around gap-6 rounded-t-xl bg-zinc-100 p-3 text-5xl text-black"
       >
         {skills.map((skill) => (
-          <motion.div
-            key={skill.name}
-            variants={{
-              animate: {
-                scale: [1, 1.25, 1],
-                transition: {
-                  ease: [0.17, 0.67, 0.83, 0.67],
+          <Tooltip key={skill.name} text={skill.name}>
+            <motion.div
+              variants={{
+                animate: {
+                  scale: [1, 1.25, 1],
+                  transition: {
+                    ease: [0.17, 0.67, 0.83, 0.67],
+                  },
                 },
-              },
-            }}
-          >
-            <button
-              onClick={handleSelection(skill.percentage, skill.name)}
-              className={clsx("transition-all hover:scale-110", {
-                "scale-125 drop-shadow ": skill.name === active,
-              })}
+              }}
             >
-              {skill.icon}
-            </button>
-          </motion.div>
+              <button
+                onClick={handleSelection(skill.percentage, skill.name)}
+                className={clsx("transition-all hover:scale-110", {
+                  "scale-125 drop-shadow ": skill.name === active,
+                })}
+              >
+                {skill.icon}
+              </button>
+            </motion.div>
+          </Tooltip>
         ))}
       </motion.div>
       {active && (

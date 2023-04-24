@@ -161,7 +161,7 @@ export const skills = [
   },
   {
     percentage: 60,
-    name: "Graphql",
+    name: "GraphQL",
     link: "https://graphql.org",
     icon: <SiGraphql className="text-rose-800" aria-label="Graphql" />,
   },

@@ -14,6 +14,8 @@ import { BlogList } from "@/components/ui/organisms/blog-list";
 import { Suspense } from "react";
 import { DisplayDice } from "@/components/ui/molecules/display-dice";
 import { ExternalLink } from "@/components/ui/atoms/external-link";
+import { SiFrontendmentor } from "react-icons/si";
+import { Tooltip } from "@/components/ui/molecules/tooltip";
 
 export async function getStaticProps() {
   const metas = getAllMeta<BlogMetadata>("blog");
@@ -80,18 +82,34 @@ export default function Home({
         <section>
           <h2 className="text-5xl font-bold">Contact</h2>
           <div className="flex gap-4 p-4 text-3xl">
-            <ExternalIconLink
-              href="https://www.github.com/neronim1141"
-              className="rounded-full"
-            >
-              <FaGithub className=" " />
-            </ExternalIconLink>
-            <ExternalIconLink
-              href="https://www.linkedin.com/in/kacperkruczek/"
-              className="text-blue-700 "
-            >
-              <FaLinkedinIn className=" bg-blue-700 p-0.5 text-white" />
-            </ExternalIconLink>
+            <Tooltip text="github profile">
+              <ExternalIconLink
+                href="https://www.github.com/neronim1141"
+                className="rounded-full"
+                alt="github"
+              >
+                <FaGithub aria-label="github" />
+              </ExternalIconLink>
+            </Tooltip>
+            <Tooltip text="linkedin profile">
+              <ExternalIconLink
+                href="https://www.linkedin.com/in/kacperkruczek/"
+                alt="linkedin"
+              >
+                <FaLinkedinIn
+                  className="bg-blue-700 p-0.5 text-white"
+                  aria-label="linkedin"
+                />
+              </ExternalIconLink>
+            </Tooltip>
+            <Tooltip text="frontmentor profile">
+              <ExternalIconLink
+                href="https://www.frontendmentor.io/profile/neronim1141"
+                alt="frontendmentor"
+              >
+                <SiFrontendmentor aria-label="frontendmentor" />
+              </ExternalIconLink>
+            </Tooltip>
             <ExternalLink
               href="mailto:kacper.m.kruczek@gmail.com"
               className="text-base flex gap-1"
