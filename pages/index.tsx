@@ -16,6 +16,8 @@ import { DisplayDice } from "@/components/ui/molecules/display-dice";
 import { ExternalLink } from "@/components/ui/atoms/external-link";
 import { SiFrontendmentor } from "react-icons/si";
 import { Tooltip } from "@/components/ui/molecules/tooltip";
+import clsx from "clsx";
+import { ButtonLink } from "@/components/ui/atoms/button-link";
 
 export async function getStaticProps() {
   const metas = getAllMeta<BlogMetadata>("blog");
@@ -117,6 +119,11 @@ export default function Home({
               <MdAlternateEmail className="text-3xl" />
               kacper.m.kruczek@gmail.com
             </ExternalLink>
+          </div>
+          <div className="p-2">
+            <ButtonLink href="/files/Kacper_kruczek_CV.pdf" target="_blank">
+              Get my CV
+            </ButtonLink>
           </div>
         </section>
       </div>
