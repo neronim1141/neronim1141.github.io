@@ -83,7 +83,7 @@ export default function Home({
         <BlogList blogPosts={blogRolls} total={totalBlogPosts} />
         <section>
           <h2 className="text-5xl font-bold">Contact</h2>
-          <div className="flex gap-4 p-4 text-3xl">
+          <div className="flex gap-4 p-4 text-3xl flex-wrap">
             <Tooltip text="github profile">
               <ExternalIconLink
                 href="https://www.github.com/neronim1141"
