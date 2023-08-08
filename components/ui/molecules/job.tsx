@@ -25,7 +25,7 @@ export const Job = ({
   }
   const [expandedCompany, expandedTitle] = expanded.split(".");
   return (
-    <article className="space-y-2">
+    <article className="space-y-2 border-2 p-2 rounded-lg">
       <h3 className="text-2xl font-bold">
         {company}{" "}
         <WorkTime

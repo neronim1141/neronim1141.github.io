@@ -9,7 +9,7 @@ export type Position = {
   title: string;
   description?: string;
   from: string;
-  to: string;
+  to?: string;
 };
 interface PositionProps extends Position {
   expanded: string;

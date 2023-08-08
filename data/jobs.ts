@@ -4,6 +4,10 @@ export const jobs = [
     positions: [{ title: "React Developer", from: "2023-7" }],
   },
   {
+    company: "Freelancer",
+    positions: [{ title: "Freelancer", from: "2023-5", to: "2023-6" }],
+  },
+  {
     company: "Sonalake",
     positions: [
       {

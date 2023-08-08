@@ -68,7 +68,10 @@ export default function Home({
       </section>
       <div className="flex flex-col gap-4 md:grid md:grid-cols-2">
         <JobList jobs={jobs} />
-        <SkillList />
+        <div className="flex flex-col gap-4">
+          <SkillList />
+          <BlogList blogPosts={blogRolls} total={totalBlogPosts} />
+        </div>
         <section>
           <h2 className="text-5xl font-bold">Languages</h2>
           <ul className="space-y-2 p-2">
@@ -80,7 +83,6 @@ export default function Home({
             </li>
           </ul>
         </section>
-        <BlogList blogPosts={blogRolls} total={totalBlogPosts} />
         <section>
           <h2 className="text-5xl font-bold">Contact</h2>
           <div className="flex gap-4 p-4 text-3xl flex-wrap">
