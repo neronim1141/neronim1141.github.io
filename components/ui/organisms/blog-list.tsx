@@ -9,9 +9,9 @@ interface BlogListProps {
 }
 export const BlogList = ({ blogPosts, total }: BlogListProps) => {
   return (
-    <section className="flex flex-col gap-4 sm:row-span-2 md:items-end">
+    <section className="flex flex-col gap-4 sm:row-span-2 ">
       <h2 className="text-5xl font-bold">Blog Posts</h2>
-      <div className="grid w-full max-w-md grid-cols-1 gap-4">
+      <div className="grid w-full  grid-cols-1 gap-4 ">
         {blogPosts.map((blogPage) => (
           <BlogRoll key={blogPage.slug} {...blogPage} />
         ))}

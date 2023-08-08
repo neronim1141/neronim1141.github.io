@@ -1,5 +1,9 @@
 export const jobs = [
   {
+    company: "Concise Software",
+    positions: [{ title: "React Developer", from: "2023-7" }],
+  },
+  {
     company: "Sonalake",
     positions: [
       {

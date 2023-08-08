@@ -12,7 +12,7 @@ export const BlogRoll = ({ slug, title, tags, publishDate }: BlogRollProps) => {
     <Link
       key={slug}
       href={`/blog/${slug}`}
-      className="group relative rounded-lg border shadow transition-all hover:-translate-y-[1px] hover:shadow-lg"
+      className="group relative rounded-lg border shadow transition-all hover:-translate-y-[1px] hover:shadow-lg w-full "
     >
       <article className="flex flex-col gap-4">
         <header className="pl-4 pt-4 text-3xl font-bold">{title}</header>

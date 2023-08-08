@@ -34,17 +34,19 @@ export const Position = ({
         <button
           onClick={() => setExpanded(isOpen ? "" : title)}
           disabled={!description}
-          className="flex flex-col"
+          className="flex flex-col  max-w-xs w-full"
         >
-          {title}
+          <span className="flex gap-2">
+            {title}
+            {description && (
+              <DirectionArrow
+                direction={isOpen ? "up" : "down"}
+                className="mt-2 group-hover:scale-150"
+              />
+            )}
+          </span>
           <WorkTime from={dayjs(from)} to={dayjs(to)} />
         </button>
-        {description && (
-          <DirectionArrow
-            direction={isOpen ? "up" : "down"}
-            className="mt-2 group-hover:scale-150"
-          />
-        )}
       </motion.h4>
       <AnimatePresence initial={false}>
         {isOpen && (
